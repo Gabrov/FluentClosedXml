@@ -1353,7 +1353,7 @@ namespace FluentClosedXml
             // Remove them individually
             foreach (var cf in formatsToRemove)
             {
-                worksheet.ConditionalFormats.Remove(lcf => true);
+                worksheet.ConditionalFormats.Remove(lcf => lcf == cf);
             }
 
             return this;
