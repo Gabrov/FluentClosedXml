@@ -1,13 +1,32 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <TargetFrameworks>net10.0;netstandard2.1</TargetFrameworks>
+    <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
+
+    <!-- NuGet Package Properties -->
+    <PackageId>FluentClosedXml</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Gábor Mizda</Authors>
+    <Company>Faerch Hungary Kft.</Company>
+    <Description>A fluent API wrapper for ClosedXML to simplify Excel file creation and manipulation</Description>
+    <PackageTags>excel;closedxml;fluent;xlsx;spreadsheet</PackageTags>
+    <PackageProjectUrl>https://github.com/Gabrov/FluentClosedXml</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Gabrov/FluentClosedXml</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="ClosedXML" Version="0.105.0" />
+  </ItemGroup>
+
+  <!-- Include README in package if it exists -->
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="\" Condition="Exists('..\README.md')" />
   </ItemGroup>
 
 </Project>

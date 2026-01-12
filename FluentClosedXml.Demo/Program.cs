@@ -84,7 +84,7 @@ class Program
             
         worksheet.AutoFitColumns();
 
-        workbook.SaveAs("basic-demo.xlsx");
+        workbook.SaveAs("01-basic-demo.xlsx");
         Console.WriteLine("   ✓ Created basic-demo.xlsx");
     }
 
@@ -142,7 +142,7 @@ class Program
         worksheet.AutoFitColumns()
                 .FreezeTopRow();
 
-        workbook.SaveAs("employee-data.xlsx");
+        workbook.SaveAs("02-employee-data.xlsx");
         Console.WriteLine("   ✓ Created employee-data.xlsx");
     }
 
@@ -193,7 +193,7 @@ class Program
 
         worksheet.AutoFitColumns();
 
-        workbook.SaveAs("styling-demo.xlsx");
+        workbook.SaveAs("03-styling-demo.xlsx");
         Console.WriteLine("   ✓ Created styling-demo.xlsx");
     }
 
@@ -227,7 +227,7 @@ class Program
         // Highlight net income in dark green
         worksheet.GetRange("A9:E9").WithBackgroundColor(XLColor.DarkGreen).WithFontColor(XLColor.White);
 
-        workbook.SaveAs("financial-report.xlsx");
+        workbook.SaveAs("04-financial-report.xlsx");
         Console.WriteLine("   ✓ Created financial-report.xlsx");
     }
 
@@ -268,7 +268,7 @@ class Program
 
         summarySheet.AutoFitColumns();
 
-        workbook.SaveAs("sales-with-extensions.xlsx");
+        workbook.SaveAs("05-sales-with-extensions.xlsx");
         Console.WriteLine("   ✓ Created sales-with-extensions.xlsx");
     }
 
@@ -384,7 +384,7 @@ class Program
 
         worksheet.AutoFitColumns();
 
-        workbook.SaveAs("formula-demo.xlsx");
+        workbook.SaveAs("06-formula-demo.xlsx");
         Console.WriteLine("   ✓ Created formula-demo.xlsx with comprehensive formula examples");
     }
 
@@ -626,7 +626,7 @@ class Program
         // Auto-fit columns
         worksheet.AutoFitColumns();
 
-        workbook.SaveAs("predefined-number-formats-demo.xlsx");
+        workbook.SaveAs("07-predefined-number-formats-demo.xlsx");
         Console.WriteLine("   ✓ Created predefined-number-formats-demo.xlsx showcasing ClosedXML's built-in formats");
     }
 
@@ -711,7 +711,7 @@ class Program
 
         worksheet.AutoFitColumns();
 
-        workbook.SaveAs("range-address-demo.xlsx");
+        workbook.SaveAs("08-range-address-demo.xlsx");
         Console.WriteLine("   ✓ Created range-address-demo.xlsx demonstrating GetAddress() method");
     }
 
@@ -842,7 +842,7 @@ class Program
 
         worksheet.AutoFitColumns();
 
-        workbook.SaveAs("range-formula-merge-demo.xlsx");
+        workbook.SaveAs("09-range-formula-merge-demo.xlsx");
         Console.WriteLine("   ✓ Created range-formula-merge-demo.xlsx demonstrating range formulas and merging");
     }
 
@@ -980,7 +980,7 @@ class Program
 
         worksheet.AutoFitColumns();
 
-        workbook.SaveAs("horizontal-range-values-demo.xlsx");
+        workbook.SaveAs("10-horizontal-range-values-demo.xlsx");
         Console.WriteLine("   ✓ Created horizontal-range-values-demo.xlsx demonstrating the fix for horizontal range values");
     }
 
@@ -1170,7 +1170,7 @@ class Program
 
         worksheet.AutoFitColumns();
 
-        workbook.SaveAs("border-demo.xlsx");
+        workbook.SaveAs("11-border-demo.xlsx");
         Console.WriteLine("   ✓ Created border-demo.xlsx showcasing thick outside, thin inside borders and more!");
     }
 
@@ -1392,7 +1392,7 @@ class Program
         // Auto-fit rows to accommodate wrapped text
         worksheet.AutoFitRows();
 
-        workbook.SaveAs("text-wrap-demo.xlsx");
+        workbook.SaveAs("12-text-wrap-demo.xlsx");
         Console.WriteLine("   ✓ Created text-wrap-demo.xlsx showcasing text wrapping for cells and ranges!");
     }
 
@@ -1571,7 +1571,7 @@ class Program
 
         worksheet.AutoFitColumns();
 
-        workbook.SaveAs("multiple-range-sum-demo.xlsx");
+        workbook.SaveAs("13-multiple-range-sum-demo.xlsx");
         Console.WriteLine("   ✓ Created multiple-range-sum-demo.xlsx demonstrating enhanced WithSum() capabilities!");
     }
 }

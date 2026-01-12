@@ -1,0 +1,9 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="FluentClosedXml.Demo/FluentClosedXml.Demo.csproj" />
+  <Project Path="FluentClosedXml/FluentClosedXml.csproj" />
+</Solution>
