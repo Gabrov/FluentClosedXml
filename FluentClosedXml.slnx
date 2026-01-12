@@ -4,6 +4,11 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
+  <Folder Name="/.github/" />
+  <Folder Name="/.github/workflows/">
+    <File Path=".github/workflows/build.yml" />
+    <File Path=".github/workflows/publish-nuget.yml" />
+  </Folder>
   <Project Path="FluentClosedXml.Demo/FluentClosedXml.Demo.csproj" />
   <Project Path="FluentClosedXml/FluentClosedXml.csproj" />
 </Solution>
