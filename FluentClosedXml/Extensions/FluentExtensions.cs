@@ -73,30 +73,42 @@ namespace FluentClosedXml.Extensions
         /// <returns>The styled FluentRange</returns>
         public static FluentRange WithTheme(this FluentRange range, FluentTheme theme)
         {
-            return theme switch
+            FluentRange returnValue = range;
+
+            switch (theme)
             {
-                FluentTheme.Header => range.Bold()
-                                          .WithBackgroundColor(XLColor.LightBlue)
-                                          .WithFontColor(XLColor.White)
-                                          .Center(),
+                case FluentTheme.Header:
+                    returnValue = range.Bold()
+                                       .WithBackgroundColor(XLColor.LightBlue)
+                                       .WithFontColor(XLColor.White)
+                                       .Center();
+                    break;
 
-                FluentTheme.Data => range.WithBorder()
-                                        .WithBackgroundColor(XLColor.White),
+                case FluentTheme.Data:
+                    returnValue = range.WithBorder()
+                                        .WithBackgroundColor(XLColor.White);
+                    break;
 
-                FluentTheme.Total => range.Bold()
-                                         .WithBackgroundColor(XLColor.LightGray)
-                                         .WithBorder(XLBorderStyleValues.Thick),
+                case FluentTheme.Total:
+                    returnValue = range.Bold()
+                                       .WithBackgroundColor(XLColor.LightGray)
+                                       .WithBorder(XLBorderStyleValues.Thick);
+                    break;
 
-                FluentTheme.Warning => range.WithBackgroundColor(XLColor.Yellow)
-                                           .WithFontColor(XLColor.DarkRed)
-                                           .Bold(),
+                case FluentTheme.Warning:
+                    returnValue = range.WithBackgroundColor(XLColor.Yellow)
+                                       .WithFontColor(XLColor.DarkRed)
+                                       .Bold();
+                    break;
 
-                FluentTheme.Success => range.WithBackgroundColor(XLColor.LightGreen)
-                                           .WithFontColor(XLColor.DarkGreen)
-                                           .Bold(),
+                case FluentTheme.Success:
+                    returnValue = range.WithBackgroundColor(XLColor.LightGreen)
+                                       .WithFontColor(XLColor.DarkGreen)
+                                       .Bold();
+                    break;
+            }
 
-                _ => range
-            };
+            return returnValue;
         }
 
         /// <summary>
@@ -107,30 +119,42 @@ namespace FluentClosedXml.Extensions
         /// <returns>The styled FluentCell</returns>
         public static FluentCell WithTheme(this FluentCell cell, FluentTheme theme)
         {
-            return theme switch
+            FluentCell returnValue = cell;
+
+            switch (theme)
             {
-                FluentTheme.Header => cell.Bold()
-                                         .WithBackgroundColor(XLColor.LightBlue)
-                                         .WithFontColor(XLColor.White)
-                                         .Center(),
+                case FluentTheme.Header:
+                    returnValue = cell.Bold()
+                                      .WithBackgroundColor(XLColor.LightBlue)
+                                      .WithFontColor(XLColor.White)
+                                      .Center();
+                    break;
 
-                FluentTheme.Data => cell.WithBorder()
-                                       .WithBackgroundColor(XLColor.White),
+                case FluentTheme.Data:
+                    returnValue = cell.WithBorder()
+                                      .WithBackgroundColor(XLColor.White);
+                    break;
 
-                FluentTheme.Total => cell.Bold()
-                                        .WithBackgroundColor(XLColor.LightGray)
-                                        .WithBorder(XLBorderStyleValues.Thick),
+                case FluentTheme.Total:
+                    returnValue = cell.Bold()
+                                      .WithBackgroundColor(XLColor.LightGray)
+                                      .WithBorder(XLBorderStyleValues.Thick);
+                    break;
 
-                FluentTheme.Warning => cell.WithBackgroundColor(XLColor.Yellow)
-                                          .WithFontColor(XLColor.DarkRed)
-                                          .Bold(),
+                case FluentTheme.Warning:
+                    returnValue = cell.WithBackgroundColor(XLColor.Yellow)
+                                      .WithFontColor(XLColor.DarkRed)
+                                      .Bold();
+                    break;
 
-                FluentTheme.Success => cell.WithBackgroundColor(XLColor.LightGreen)
-                                          .WithFontColor(XLColor.DarkGreen)
-                                          .Bold(),
+                case FluentTheme.Success:
+                    returnValue = cell.WithBackgroundColor(XLColor.LightGreen)
+                                      .WithFontColor(XLColor.DarkGreen)
+                                      .Bold();
+                    break;
+            }
 
-                _ => cell
-            };
+            return returnValue;
         }
 
         /// <summary>

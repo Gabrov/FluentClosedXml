@@ -122,7 +122,7 @@ namespace FluentClosedXml
         /// </summary>
         /// <param name="value">Value to set</param>
         /// <returns>This FluentRange for method chaining</returns>
-        public FluentRange WithValue(object? value)
+        public FluentRange WithValue(object value)
         {
             if (value != null)
             {
@@ -994,7 +994,7 @@ namespace FluentClosedXml
         /// </summary>
         /// <param name="tableName">Optional table name</param>
         /// <returns>This FluentRange for method chaining</returns>
-        public FluentRange AsTable(string? tableName = null)
+        public FluentRange AsTable(string tableName = null)
         {
             var table = _range.CreateTable();
             if (!string.IsNullOrEmpty(tableName))
@@ -1067,7 +1067,7 @@ namespace FluentClosedXml
         /// <param name="backgroundColor">Background color for matching cells</param>
         /// <param name="fontColor">Font color for matching cells (optional)</param>
         /// <returns>This FluentRange for method chaining</returns>
-        public FluentRange HighlightCellsContaining(string text, XLColor backgroundColor, XLColor? fontColor = null)
+        public FluentRange HighlightCellsContaining(string text, XLColor backgroundColor, XLColor fontColor = null)
         {
             var conditionalFormat = _range.AddConditionalFormat();
             var format = conditionalFormat.WhenContains(text);
@@ -1088,7 +1088,7 @@ namespace FluentClosedXml
         /// <param name="backgroundColor">Background color for matching cells</param>
         /// <param name="fontColor">Font color for matching cells (optional)</param>
         /// <returns>This FluentRange for method chaining</returns>
-        public FluentRange HighlightCellsGreaterThan(double value, XLColor backgroundColor, XLColor? fontColor = null)
+        public FluentRange HighlightCellsGreaterThan(double value, XLColor backgroundColor, XLColor fontColor = null)
         {
             var conditionalFormat = _range.AddConditionalFormat();
             var format = conditionalFormat.WhenGreaterThan(value);
@@ -1109,7 +1109,7 @@ namespace FluentClosedXml
         /// <param name="backgroundColor">Background color for matching cells</param>
         /// <param name="fontColor">Font color for matching cells (optional)</param>
         /// <returns>This FluentRange for method chaining</returns>
-        public FluentRange HighlightCellsLessThan(double value, XLColor backgroundColor, XLColor? fontColor = null)
+        public FluentRange HighlightCellsLessThan(double value, XLColor backgroundColor, XLColor fontColor = null)
         {
             var conditionalFormat = _range.AddConditionalFormat();
             var format = conditionalFormat.WhenLessThan(value);
@@ -1131,7 +1131,7 @@ namespace FluentClosedXml
         /// <param name="backgroundColor">Background color for matching cells</param>
         /// <param name="fontColor">Font color for matching cells (optional)</param>
         /// <returns>This FluentRange for method chaining</returns>
-        public FluentRange HighlightCellsBetween(double minValue, double maxValue, XLColor backgroundColor, XLColor? fontColor = null)
+        public FluentRange HighlightCellsBetween(double minValue, double maxValue, XLColor backgroundColor, XLColor fontColor = null)
         {
             var conditionalFormat = _range.AddConditionalFormat();
             var format = conditionalFormat.WhenBetween(minValue, maxValue);
@@ -1153,7 +1153,7 @@ namespace FluentClosedXml
         /// <param name="backgroundColor">Background color for matching cells</param>
         /// <param name="fontColor">Font color for matching cells (optional)</param>
         /// <returns>This FluentRange for method chaining</returns>
-        public FluentRange HighlightCellsNotBetween(double minValue, double maxValue, XLColor backgroundColor, XLColor? fontColor = null)
+        public FluentRange HighlightCellsNotBetween(double minValue, double maxValue, XLColor backgroundColor, XLColor fontColor = null)
         {
             var conditionalFormat = _range.AddConditionalFormat();
             var format = conditionalFormat.WhenNotBetween(minValue, maxValue);
@@ -1173,7 +1173,7 @@ namespace FluentClosedXml
         /// <param name="backgroundColor">Background color for blank cells</param>
         /// <param name="fontColor">Font color for blank cells (optional)</param>
         /// <returns>This FluentRange for method chaining</returns>
-        public FluentRange HighlightBlankCells(XLColor backgroundColor, XLColor? fontColor = null)
+        public FluentRange HighlightBlankCells(XLColor backgroundColor, XLColor fontColor = null)
         {
             var conditionalFormat = _range.AddConditionalFormat();
             var format = conditionalFormat.WhenIsBlank();
@@ -1193,7 +1193,7 @@ namespace FluentClosedXml
         /// <param name="backgroundColor">Background color for error cells</param>
         /// <param name="fontColor">Font color for error cells (optional)</param>
         /// <returns>This FluentRange for method chaining</returns>
-        public FluentRange HighlightErrorCells(XLColor backgroundColor, XLColor? fontColor = null)
+        public FluentRange HighlightErrorCells(XLColor backgroundColor, XLColor fontColor = null)
         {
             var conditionalFormat = _range.AddConditionalFormat();
             var format = conditionalFormat.WhenIsError();
@@ -1214,7 +1214,7 @@ namespace FluentClosedXml
         /// <param name="backgroundColor">Background color for top values</param>
         /// <param name="fontColor">Font color for top values (optional)</param>
         /// <returns>This FluentRange for method chaining</returns>
-        public FluentRange HighlightTopValues(int n, XLColor backgroundColor, XLColor? fontColor = null)
+        public FluentRange HighlightTopValues(int n, XLColor backgroundColor, XLColor fontColor = null)
         {
             var conditionalFormat = _range.AddConditionalFormat();
             var format = conditionalFormat.WhenIsTop(n, XLTopBottomType.Items);
@@ -1235,7 +1235,7 @@ namespace FluentClosedXml
         /// <param name="backgroundColor">Background color for bottom values</param>
         /// <param name="fontColor">Font color for bottom values (optional)</param>
         /// <returns>This FluentRange for method chaining</returns>
-        public FluentRange HighlightBottomValues(int n, XLColor backgroundColor, XLColor? fontColor = null)
+        public FluentRange HighlightBottomValues(int n, XLColor backgroundColor, XLColor fontColor = null)
         {
             var conditionalFormat = _range.AddConditionalFormat();
             var format = conditionalFormat.WhenIsBottom(n, XLTopBottomType.Items);
@@ -1256,7 +1256,7 @@ namespace FluentClosedXml
         /// <param name="backgroundColor">Background color when formula is true</param>
         /// <param name="fontColor">Font color when formula is true (optional)</param>
         /// <returns>This FluentRange for method chaining</returns>
-        public FluentRange HighlightWhenFormula(string formula, XLColor backgroundColor, XLColor? fontColor = null)
+        public FluentRange HighlightWhenFormula(string formula, XLColor backgroundColor, XLColor fontColor = null)
         {
             var conditionalFormat = _range.AddConditionalFormat();
             var format = conditionalFormat.WhenIsTrue(formula);
@@ -1277,7 +1277,7 @@ namespace FluentClosedXml
         /// <param name="midColor">Color for middle values (default: Yellow)</param>
         /// <param name="maxColor">Color for maximum values (default: Green)</param>
         /// <returns>This FluentRange for method chaining</returns>
-        public FluentRange WithColorScale(XLColor? minColor = null, XLColor? midColor = null, XLColor? maxColor = null)
+        public FluentRange WithColorScale(XLColor minColor = null, XLColor midColor = null, XLColor maxColor = null)
         {
             var conditionalFormat = _range.AddConditionalFormat();
             conditionalFormat.ColorScale()
@@ -1294,7 +1294,7 @@ namespace FluentClosedXml
         /// <param name="minColor">Color for minimum values (default: Red)</param>
         /// <param name="maxColor">Color for maximum values (default: Green)</param>
         /// <returns>This FluentRange for method chaining</returns>
-        public FluentRange WithTwoColorScale(XLColor? minColor = null, XLColor? maxColor = null)
+        public FluentRange WithTwoColorScale(XLColor minColor = null, XLColor maxColor = null)
         {
             var conditionalFormat = _range.AddConditionalFormat();
             conditionalFormat.ColorScale()
@@ -1310,7 +1310,7 @@ namespace FluentClosedXml
         /// <param name="color">Color of the data bars (default: Blue)</param>
         /// <param name="showValue">Whether to show the cell value (default: true)</param>
         /// <returns>This FluentRange for method chaining</returns>
-        public FluentRange WithDataBars(XLColor? color = null, bool showValue = true)
+        public FluentRange WithDataBars(XLColor color = null, bool showValue = true)
         {
             var conditionalFormat = _range.AddConditionalFormat();
             conditionalFormat.DataBar(color ?? XLColor.Blue, showValue);
@@ -1353,7 +1353,7 @@ namespace FluentClosedXml
             // Remove them individually
             foreach (var cf in formatsToRemove)
             {
-                worksheet.ConditionalFormats.Remove(cf => true);
+                worksheet.ConditionalFormats.Remove(lcf => true);
             }
 
             return this;

@@ -37,7 +37,7 @@ namespace FluentClosedXml
         /// </summary>
         /// <param name="value">Value to set</param>
         /// <returns>This FluentCell for method chaining</returns>
-        public FluentCell WithValue(object? value)
+        public FluentCell WithValue(object value)
         {
             if (value != null)
             {
@@ -262,7 +262,7 @@ namespace FluentClosedXml
         /// <param name="criteria">Criteria for sum</param>
         /// <param name="sumRange">Range to sum (optional, uses range if not specified)</param>
         /// <returns>This FluentCell for method chaining</returns>
-        public FluentCell WithSumIf(string range, string criteria, string? sumRange = null)
+        public FluentCell WithSumIf(string range, string criteria, string sumRange = null)
         {
             if (string.IsNullOrEmpty(sumRange))
             {
@@ -411,7 +411,7 @@ namespace FluentClosedXml
         /// Gets the calculated value of the formula
         /// </summary>
         /// <returns>The calculated result of the formula</returns>
-        public object? GetFormulaResult()
+        public object GetFormulaResult()
         {
             return _cell.CachedValue;
         }
@@ -1073,7 +1073,7 @@ namespace FluentClosedXml
         /// <param name="backgroundColor">Background color for matching cell</param>
         /// <param name="fontColor">Font color for matching cell (optional)</param>
         /// <returns>This FluentCell for method chaining</returns>
-        public FluentCell HighlightIfContains(string text, XLColor backgroundColor, XLColor? fontColor = null)
+        public FluentCell HighlightIfContains(string text, XLColor backgroundColor, XLColor fontColor = null)
         {
             var range = _cell.AsRange();
             var conditionalFormat = range.AddConditionalFormat();
@@ -1095,7 +1095,7 @@ namespace FluentClosedXml
         /// <param name="backgroundColor">Background color for matching cell</param>
         /// <param name="fontColor">Font color for matching cell (optional)</param>
         /// <returns>This FluentCell for method chaining</returns>
-        public FluentCell HighlightIfGreaterThan(double value, XLColor backgroundColor, XLColor? fontColor = null)
+        public FluentCell HighlightIfGreaterThan(double value, XLColor backgroundColor, XLColor fontColor = null)
         {
             var range = _cell.AsRange();
             var conditionalFormat = range.AddConditionalFormat();
@@ -1117,7 +1117,7 @@ namespace FluentClosedXml
         /// <param name="backgroundColor">Background color for matching cell</param>
         /// <param name="fontColor">Font color for matching cell (optional)</param>
         /// <returns>This FluentCell for method chaining</returns>
-        public FluentCell HighlightIfLessThan(double value, XLColor backgroundColor, XLColor? fontColor = null)
+        public FluentCell HighlightIfLessThan(double value, XLColor backgroundColor, XLColor fontColor = null)
         {
             var range = _cell.AsRange();
             var conditionalFormat = range.AddConditionalFormat();
@@ -1140,7 +1140,7 @@ namespace FluentClosedXml
         /// <param name="backgroundColor">Background color for matching cell</param>
         /// <param name="fontColor">Font color for matching cell (optional)</param>
         /// <returns>This FluentCell for method chaining</returns>
-        public FluentCell HighlightIfBetween(double minValue, double maxValue, XLColor backgroundColor, XLColor? fontColor = null)
+        public FluentCell HighlightIfBetween(double minValue, double maxValue, XLColor backgroundColor, XLColor fontColor = null)
         {
             var range = _cell.AsRange();
             var conditionalFormat = range.AddConditionalFormat();
@@ -1163,7 +1163,7 @@ namespace FluentClosedXml
         /// <param name="backgroundColor">Background color for matching cell</param>
         /// <param name="fontColor">Font color for matching cell (optional)</param>
         /// <returns>This FluentCell for method chaining</returns>
-        public FluentCell HighlightIfNotBetween(double minValue, double maxValue, XLColor backgroundColor, XLColor? fontColor = null)
+        public FluentCell HighlightIfNotBetween(double minValue, double maxValue, XLColor backgroundColor, XLColor fontColor = null)
         {
             var range = _cell.AsRange();
             var conditionalFormat = range.AddConditionalFormat();
@@ -1184,7 +1184,7 @@ namespace FluentClosedXml
         /// <param name="backgroundColor">Background color for blank cell</param>
         /// <param name="fontColor">Font color for blank cell (optional)</param>
         /// <returns>This FluentCell for method chaining</returns>
-        public FluentCell HighlightIfBlank(XLColor backgroundColor, XLColor? fontColor = null)
+        public FluentCell HighlightIfBlank(XLColor backgroundColor, XLColor fontColor = null)
         {
             var range = _cell.AsRange();
             var conditionalFormat = range.AddConditionalFormat();
@@ -1205,7 +1205,7 @@ namespace FluentClosedXml
         /// <param name="backgroundColor">Background color for error cell</param>
         /// <param name="fontColor">Font color for error cell (optional)</param>
         /// <returns>This FluentCell for method chaining</returns>
-        public FluentCell HighlightIfError(XLColor backgroundColor, XLColor? fontColor = null)
+        public FluentCell HighlightIfError(XLColor backgroundColor, XLColor fontColor = null)
         {
             var range = _cell.AsRange();
             var conditionalFormat = range.AddConditionalFormat();
@@ -1227,7 +1227,7 @@ namespace FluentClosedXml
         /// <param name="backgroundColor">Background color when formula is true</param>
         /// <param name="fontColor">Font color when formula is true (optional)</param>
         /// <returns>This FluentCell for method chaining</returns>
-        public FluentCell HighlightWhenFormula(string formula, XLColor backgroundColor, XLColor? fontColor = null)
+        public FluentCell HighlightWhenFormula(string formula, XLColor backgroundColor, XLColor fontColor = null)
         {
             var range = _cell.AsRange();
             var conditionalFormat = range.AddConditionalFormat();
@@ -1263,7 +1263,7 @@ namespace FluentClosedXml
             // Remove them individually
             foreach (var cf in formatsToRemove)
             {
-                worksheet.ConditionalFormats.Remove(cf => true);
+                worksheet.ConditionalFormats.Remove(lcf => true);
             }
 
             return this;
