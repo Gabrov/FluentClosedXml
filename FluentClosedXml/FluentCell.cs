@@ -37,7 +37,7 @@ namespace FluentClosedXml
         /// </summary>
         /// <param name="value">Value to set</param>
         /// <returns>This FluentCell for method chaining</returns>
-        public FluentCell WithValue(object value)
+        public FluentCell WithValue(object value = null)
         {
             if (value != null)
             {

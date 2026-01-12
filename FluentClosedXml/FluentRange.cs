@@ -122,7 +122,7 @@ namespace FluentClosedXml
         /// </summary>
         /// <param name="value">Value to set</param>
         /// <returns>This FluentRange for method chaining</returns>
-        public FluentRange WithValue(object value)
+        public FluentRange WithValue(object value = null)
         {
             if (value != null)
             {

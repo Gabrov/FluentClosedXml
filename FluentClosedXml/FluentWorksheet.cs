@@ -29,7 +29,7 @@ namespace FluentClosedXml
         /// <param name="cellAddress">Cell address (e.g., "A1")</param>
         /// <param name="value">Value to set</param>
         /// <returns>FluentCell for further cell operations</returns>
-        public FluentCell SetCell(string cellAddress, object value)
+        public FluentCell SetCell(string cellAddress, object value = null)
         {
             var cell = _worksheet.Cell(cellAddress);
             if (value != null)
@@ -46,7 +46,7 @@ namespace FluentClosedXml
         /// <param name="column">Column number (1-based)</param>
         /// <param name="value">Value to set</param>
         /// <returns>FluentCell for further cell operations</returns>
-        public FluentCell SetCell(int row, int column, object value)
+        public FluentCell SetCell(int row, int column, object value = null)
         {
             var cell = _worksheet.Cell(row, column);
             if (value != null)
